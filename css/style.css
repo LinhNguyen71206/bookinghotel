@@ -1,0 +1,60 @@
+/* css/style.css - Giao diện đơn giản */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #222; background: #f4f6f8; line-height: 1.5; }
+.container { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+main.container { padding-top: 20px; padding-bottom: 40px; min-height: 70vh; }
+
+.site-header { background: #1a4d8f; }
+.site-header .brand { display: inline-block; padding: 14px 0; color: #fff; font-size: 20px; font-weight: bold; text-decoration: none; }
+.site-footer { background: #e3e7ec; color: #555; font-size: 13px; padding: 14px 0; text-align: center; }
+
+h1 { font-size: 24px; margin: 0 0 16px; }
+h2 { font-size: 18px; margin: 20px 0 10px; }
+a { color: #1a4d8f; }
+
+.card { background: #fff; border: 1px solid #d8dde3; border-radius: 6px; padding: 16px; margin-bottom: 16px; }
+
+/* Form */
+.form-row { margin-bottom: 12px; }
+.form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+label { display: block; font-weight: bold; margin-bottom: 4px; font-size: 14px; }
+input[type=text], input[type=date], input[type=number], input[type=email], input[type=tel], select, textarea {
+    width: 100%; padding: 8px; border: 1px solid #b8c0c9; border-radius: 4px; font-size: 14px; font-family: inherit;
+}
+textarea { min-height: 70px; resize: vertical; }
+input.has-error, select.has-error, textarea.has-error { border-color: #c62828; background: #fff6f6; }
+.field-error { color: #c62828; font-size: 13px; margin-top: 3px; }
+.hint { color: #777; font-size: 12px; font-weight: normal; }
+.required { color: #c62828; }
+
+.btn { display: inline-block; padding: 9px 18px; border: 0; border-radius: 4px; background: #1a4d8f; color: #fff;
+       font-size: 14px; cursor: pointer; text-decoration: none; }
+.btn:hover { background: #143d73; }
+.btn-secondary { background: #6b7785; }
+.btn-secondary:hover { background: #55606c; }
+
+/* Thông báo */
+.alert { padding: 10px 14px; border-radius: 4px; margin-bottom: 14px; font-size: 14px; }
+.alert-error   { background: #fdecea; border: 1px solid #f5c2c0; color: #8e1b1b; }
+.alert-success { background: #e7f6ea; border: 1px solid #b7e1c0; color: #1e6b32; }
+.alert-info    { background: #e8f1fb; border: 1px solid #bcd4ef; color: #1a4d8f; }
+
+/* Danh sách phòng */
+.room-item { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
+.room-item h3 { margin: 0 0 6px; font-size: 17px; }
+.room-meta { color: #555; font-size: 14px; }
+.room-price { text-align: right; min-width: 170px; }
+.price { font-size: 18px; font-weight: bold; color: #c62828; }
+.badge { display: inline-block; background: #eef1f5; border-radius: 10px; padding: 2px 9px; font-size: 12px; margin: 2px 4px 2px 0; }
+.badge-warn { background: #fff3cd; }
+
+/* Bảng thông tin */
+table.info { width: 100%; border-collapse: collapse; font-size: 14px; }
+table.info th, table.info td { text-align: left; padding: 7px 4px; border-bottom: 1px solid #eceff2; }
+table.info th { width: 40%; color: #555; font-weight: normal; }
+.total-row td, .total-row th { font-weight: bold; font-size: 16px; }
+
+@media (max-width: 600px) {
+    .room-item { flex-direction: column; }
+    .room-price { text-align: left; }
+}
